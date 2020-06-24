@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
 export class AppComponent {
-  title = 'HowOldAreYou';
 }
+import { AppRoutingModule } from './app-routing.module';
+import { TimelinesComponent } from './timelines/timelines.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    TimelinesComponent,
+  ],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
+})
+export class AppModule {}
